@@ -2,7 +2,7 @@
 
 This demo application showcases how you can use VideoKit components in React app. It's bootstrapped using [Create React App](https://github.com/facebook/create-react-app) with TypeScript support.
 
-Here's you see [Live Demo](https://js-demo.video.io)
+Here's you can check [Live Demo](https://js-demo.video.io).
 
 ## Available Scripts
 
