@@ -1,0 +1,51 @@
+.app {
+  text-align: center;
+}
+
+nav {
+  width: 100%;
+  max-width: 600px;
+  margin: 50px auto;
+}
+
+nav ul {
+  display: flex;
+  align-content: space-between;
+  align-items: stretch;
+  padding: 0;
+}
+
+nav li {
+  flex: 1 1 auto;
+  list-style: none;
+}
+
+nav li a {
+  padding: 5px 15px;
+  color: #FF427E;
+}
+
+nav li .active {
+  text-decoration: none;
+  background: #FF427E;
+  color: #fff;
+  border-radius: 14px;
+}
+
+main {
+  width: 100%;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.player {
+  height: 500px;
+  margin: 20px 0;
+}
+
+.uploader {
+  height: 500px;
+  margin: 20px 0;
+}
