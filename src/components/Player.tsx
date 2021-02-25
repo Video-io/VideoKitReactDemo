@@ -23,8 +23,7 @@ function Player({ video, playlist }: PlayerProps) {
       aspectMode: AspectMode.RESIZE_ASPECT_FILL,
       volume: 0.5,
       size: 'parent',
-      showControls: true,
-      hideControlsTimeout: 0
+      showControls: true
     })
 
     return () => {

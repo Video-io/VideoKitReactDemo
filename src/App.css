@@ -49,3 +49,21 @@ main {
   height: 500px;
   margin: 20px 0;
 }
+
+.feed {
+  position: absolute;
+  top: 120px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.feed-player {
+  position: relative;
+  max-width: 800px;
+  margin: 50px auto;
+  height: 500px;
+  margin: 0 auto;
+  padding: 0 0 50px;
+  box-sizing: border-box;
+}

@@ -9,6 +9,7 @@ import {
 } from 'react-router-dom';
 import Player from './components/Player';
 import Uplader from './components/Uploader';
+import Feed from './components/Feed';
 import './App.css';
 import '@video-io/videokit/videokit.css'
 
@@ -50,6 +51,9 @@ function App() {
                 <NavLink to="/player">Player</NavLink>
               </li>
               <li>
+                <NavLink to="/feed">Feed</NavLink>
+              </li>
+              <li>
                 <NavLink to="/uploader">Uploader</NavLink>
               </li>
             </ul>
@@ -61,6 +65,9 @@ function App() {
               </Route>
               <Route path="/player">
                 <Player playlist={playlist} />
+              </Route>
+              <Route path="/feed">
+                <Feed playlist={playlist} />
               </Route>
               <Route path="/uploader">
                 <Uplader />
