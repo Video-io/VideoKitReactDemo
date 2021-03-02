@@ -2012,10 +2012,10 @@
     "@typescript-eslint/types" "4.14.2"
     eslint-visitor-keys "^2.0.0"
 
-"@video-io/videokit@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@video-io/videokit/-/videokit-1.0.2.tgz#2f9f1571b0f9bedcd03b99e90dc953d02426945b"
-  integrity sha512-uXqFOyhC1tXu6AMb9lzWe1R6PAWyweX5FpXUZx2jC2NuYi3T1pDddrEjGlMA13o2cn6rSEN4uqObKOaZu3hbHQ==
+"@video-io/videokit@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@video-io/videokit/-/videokit-1.0.3.tgz#fe44099de09c4854302558202fe1b7dd29d1a30a"
+  integrity sha512-VJxbuXN89X9vQHTWuHraWXjikBl1E3Fby+eavPVe0I9FMPKLYd39h8E4hjzNYtnD4bNXKkuD9GFZME+r6CH7hQ==
 
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
