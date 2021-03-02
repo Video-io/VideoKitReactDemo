@@ -10,6 +10,7 @@ import {
 import Player from './components/Player';
 import Uplader from './components/Uploader';
 import Feed from './components/Feed';
+import Stories from './components/Stories/Stories';
 import './App.css';
 import '@video-io/videokit/videokit.css'
 
@@ -54,6 +55,9 @@ function App() {
                 <NavLink to="/feed">Feed</NavLink>
               </li>
               <li>
+                <NavLink to="/stories">Stories</NavLink>
+              </li>
+              <li>
                 <NavLink to="/uploader">Uploader</NavLink>
               </li>
             </ul>
@@ -68,6 +72,9 @@ function App() {
               </Route>
               <Route path="/feed">
                 <Feed playlist={playlist} />
+              </Route>
+              <Route path="/stories">
+                <Stories />
               </Route>
               <Route path="/uploader">
                 <Uplader />

@@ -1,0 +1,256 @@
+.stories-list {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin-bottom: 8px;
+  padding: 8px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  box-sizing: border-box;
+  border-radius: 3px;
+  background: #fff;
+  white-space: nowrap;
+}
+
+.story {
+  display: inline-block;
+  position: relative;
+  width: 220px;
+  height: 382px;
+  overflow: hidden;
+  vertical-align: top;
+  white-space: normal;
+  cursor: pointer;
+}
+
+.story:not(:last-child) {
+  margin-right: 8px;
+}
+
+.story-preview {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.story-preview::after {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .01);
+  content: '';
+}
+
+.story-avatar {
+  display: block;
+  z-index: 1;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 16px;
+  border: 2px solid #fff;
+  border-radius: 100%;
+}
+
+.story-username {
+  z-index: 1;
+  position: relative;
+  padding-top: 8px;
+  color: #444;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.stories-player {
+  height: 500px;
+}
+
+/**
+ * Players
+ */
+
+.stories-player {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .8);
+  opacity: 0;
+  z-index: -1;
+  transition: z-index .1s step-end, opacity .1s;
+}
+
+.stories-player--active {
+  z-index: 10000;
+  opacity: 1;
+  transition: z-index .1s step-start, opacity .1s;
+}
+
+.stories-player-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.stories-player-body {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+.stories-player-user {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+}
+
+.stories-player-user-pic {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+  float: left;
+  border: 2px solid #fff;
+  border-radius: 100%;
+}
+
+.stories-player-user-name {
+  float: left;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+.stories-player-close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.stories-player-close:after,
+.stories-player-close:before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  transform: rotate(45deg);
+  border-left: 2px solid #fff;
+  content: '';
+}
+
+.stories-player-close:before {
+  transform: rotate(-45deg);
+}
+
+.stories-player-control {
+  display: flex;
+  position: absolute;
+  top: 72px;
+  right: 0;
+  left: 0;
+  height: 15px;
+  margin: 0 -3px;
+  overflow: hidden;
+}
+
+.stories-player-control-item {
+  flex-grow: 1;
+  flex-shrink: 1;
+  height: 5px;
+  margin: 5px;
+  overflow: hidden;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, .3);
+  cursor: pointer;
+}
+
+.stories-player-control-item div {
+  width: 0;
+  height: 100%;
+  border-radius: 3px;
+  background: #fff;
+}
+
+.stories-player-control-item--active div {
+  transition: width .5s;
+}
+
+.stories-player-control-item--played div {
+  width: 100%!important;
+}
+
+.stories-player-arrow {
+  position: absolute;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  margin-top: -20px;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.stories-player-arrow::after {
+  content: '';
+  width: 200%;
+  height: 200%;
+  margin: -100%;
+  position: absolute;
+}
+
+.stories-player-arrow--prev {
+  left: 30px;
+  transform: rotate(-45deg);
+}
+
+.stories-player-arrow--next {
+  right: 30px;
+  transform: rotate(135deg);
+}
+
+.stories-player-video {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  bottom: 20px;
+  left: 0;
+}
+
+
+@media (max-width: 480px) {
+  .stories-player-close {
+    right: 13px;
+  }
+
+  .stories-player-arrow--prev {
+    left: 13px;
+  }
+
+  .stories-player-arrow--next {
+    right: 13px;
+  }
+}
