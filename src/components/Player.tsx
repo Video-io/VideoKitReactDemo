@@ -18,7 +18,7 @@ function Player({ video, playlist }: PlayerProps) {
     const player = new VKPlayer(playerRef.current!, {
       video,
       playlist,
-      autoPlay: true,
+      autoplay: true,
       loop: true,
       aspectMode: AspectMode.RESIZE_ASPECT_FILL,
       volume: 0.5,

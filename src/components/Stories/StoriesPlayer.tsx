@@ -66,16 +66,16 @@ export default function StoriesPlayer({
 
     playerRef.current = new Player(playerElRef.current!, {
       playlist,
-      autoPlay: true,
+      autoplay: true,
       volume: 1,
       size: 'parent',
       aspectMode: AspectMode.RESIZE_ASPECT,
       showControls: false
     })
-    playerRef.current.subscribe('timeupdate', (event, time) => {
-      const duration = playerRef.current!.getDuration()
+    playerRef.current.subscribe('timeupdate', (event, { currentTime }) => {
+      const { duration } = playerRef.current!
 
-      setPlaybackProgress(duration ? time / duration : 0)
+      setPlaybackProgress(duration ? currentTime / duration : 0)
     })
     playerRef.current.subscribe('ended', () => setPlaybackEnded(true))
 
@@ -122,7 +122,6 @@ export default function StoriesPlayer({
     const observer = new ResizeObserver(([entry]) => {
       if (entry && entry.contentRect) {
         setPlayerWidth(entry.contentRect.height * 9 / 16)
-        playerRef.current && playerRef.current.updateSize()
       }
     })
 

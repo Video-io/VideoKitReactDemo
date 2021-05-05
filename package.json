@@ -15,7 +15,7 @@
     "@types/react-virtualized-auto-sizer": "^1.0.0",
     "@types/react-window": "^1.8.2",
     "@types/resize-observer-browser": "^0.1.5",
-    "@video-io/videokit": "^1.0.3",
+    "@video-io/videokit": "^1.1.0",
     "classnames": "^2.2.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

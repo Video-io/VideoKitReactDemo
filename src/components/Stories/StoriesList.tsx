@@ -31,7 +31,7 @@ function StoryPreview({ videoId }: { videoId: string }) {
     const player = new Player(playerRef.current!, {
       videoId,
       playbackQuality: VideoQuality.LOW,
-      autoPlay: true,
+      autoplay: true,
       loop: true,
       volume: 0,
       size: 'parent',

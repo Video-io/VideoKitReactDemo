@@ -39,7 +39,7 @@ function FeedPlayer({ video }: { video: Video }) {
   useEffect(function() {
     const player = new Player(playerRef.current!, {
       video,
-      autoPlay: false,
+      autoplay: false,
       playOnFocus: true,
       loop: true,
       volume: 1,

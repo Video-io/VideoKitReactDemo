@@ -22,7 +22,7 @@ function Uploader() {
       setVideo(undefined)
     })
 
-    uploader.subscribe('uploadCompleted', (event, upload) => {
+    uploader.subscribe('uploadCompleted', (event: string, { upload }) => {
       setVideo(upload.video)
       uploader.resetUpload()
     })
